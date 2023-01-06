@@ -19,6 +19,7 @@ def print_list_integer(my_list=[]):
     for i in my_list:
         print("{:d}".format(i))
 ```
+## 1. Secure access to an element in a list
 
 * Write a function that retrieves an element from a list like in C.
 
