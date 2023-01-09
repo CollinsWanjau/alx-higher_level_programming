@@ -8,6 +8,7 @@ def multiple_returns(sentence):
         first = None
     else:
         first = sentence[0]
+    tpl = (len(sentence), first)
 
-    return (length, sentence[0])
+    return tpl
 
