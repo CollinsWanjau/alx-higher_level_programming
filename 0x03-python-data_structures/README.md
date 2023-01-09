@@ -104,3 +104,25 @@ def new_in_list(my_list, idx, element):
     new_list[idx] = element
     return new_list
 ```
+
+## 5. Can you C me now?
+
+    * Write a function that removes all characters c and C from a string.
+
+    * Prototype: def no_c(my_string):
+    * The function should return the new string
+    * You are not allowed to import any module
+    * You are not allowed to use str.replace()
+[Solution](https://github.com/colloso999/alx-higher_level_programming/blob/main/0x03-python-data_structures/5-no_c.py)
+
+## 6. Lists of lists = Matrix
+
+Write a function that prints a matrix of integers.
+
+    * Prototype: def print_matrix_integer(matrix=[[]]):
+    * Format: see example
+    * You are not allowed to import any module
+    * You can assume that the list only contains integers
+    * You are not allowed to cast integers into strings
+    * You have to use str.format() to print integers
+[Solution](6-print_matrix_integer.py)
