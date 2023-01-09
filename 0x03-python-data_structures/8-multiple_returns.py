@@ -4,9 +4,10 @@
 def multiple_returns(sentence):
     length = len(sentence)
     # If the sentence is empty, the first character should be equal to None
-    if len(sentence) > 0:
-        last_character = sentence[0]
+    if len(sentence) == 0:
+        first = None
     else:
-        return None
+        first = sentence[0]
+
     return (length, sentence[0])
 
