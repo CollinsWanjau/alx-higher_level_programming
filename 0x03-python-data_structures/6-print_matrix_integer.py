@@ -8,10 +8,9 @@ def print_matrix_integer(matrix=[[]]):
             # in list 'i'
             # the index method is used to find the index of j in
             # list 'i'
-            # if this index is less 
+            # if this index is less
             if i.index(j) < (len(i)-1):
-                print("{:d}".format(j), end = " ")
+                print("{:d}".format(j), end=" ")
             else:
-                print("{:d}".format(j), end = "")
+                print("{:d}".format(j), end="")
         print()
-
