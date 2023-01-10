@@ -169,3 +169,12 @@ Write a function that finds all multiples of 2 in a list.
     * The new list should have the same size as the original list
 
 [solution](10-divisible_by_2.py)
+
+## 11. Delete at
+
+Write a function that deletes the item at a specific position in a list.
+
+    * Prototype: def delete_at(my_list=[], idx=0):
+    * If idx is negative or out of range, nothing change (returns the same list)
+
+[solution](11-delete_at.py)
