@@ -1,18 +1,48 @@
 #!/usr/bin/python3
-"""Module to find the max integer in a list
+"""Unittest for max_integer([..])
 """
+import unittest
+max_integer = __import__("6-max_integer").max_integer
 
-
-def max_integer(list=[]):
-    """Function to find and return the max integer in a list of integers
-        If the list is empty, the function returns None
+class TextMaxInteger(unittest.TestCase):
     """
-    if len(list) == 0:
-        return None
-    result = list[0]
-    i = 1
-    while i < len(list):
-        if list[i] > result:
-            result = list[i]
-        i += 1
-    return result
+    A test case that contains tests against the
+    function `max_integer` wthich finds and returns the
+    maximum integer in a list
+    """
+
+    def test_empty_list(self):
+        """
+        test the `max_integer` function with an empty list.
+        should return None
+        """
+        return_value = max_integer([])
+        self.assertIs(return_value, None)
+
+    def test_no_argument(self):
+        """
+        test the `max_integer` function with no arguments.
+        should return None
+        """
+        return_value = max_integer()
+        self.assertIs(return_value, None)
+
+    def test_duplicate_max_value(self):
+        """
+        test the `max_integer` function with a list containing
+        the max value twice.
+        should return one of them
+        """
+        return_value = max_integer([1, 2, 2, 54, 34, 89, 89])
+        self.assertEqual(return_value, 89)
+
+    def test_max_value(self):
+        """
+        test the `max_integer` function with a list containing
+        integers.
+        should return the largest integer
+        """
+        return_value = max_integer([n ** 2 for n in range(20)])
+        self.assertEqual(return_value, 19 ** 2)
+
+        
