@@ -14,3 +14,7 @@
 * Instantiation with size (no type/value verification)
 
 [solution](1-square.py)
+
+#### 2. Size validation
+
+Write a class Square that defines a square by: (based on 1-square.py)
