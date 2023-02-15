@@ -59,6 +59,8 @@ $
 
 # Tasks
 
+#### 0. List databases
+
 * Write a script that lists all databases of your MySQL server.
 
 ```
@@ -75,4 +77,53 @@ guillaume@ubuntu:~/$
 
 [solution](0-list_databases.sql)
 
+#### 1. Create a database
 
+* Write a script that creates the database hbtn_0c_0 in your MySQL server.
+
+-> If the database hbtn_0c_0 already exists, your script should not fail
+-> You are not allowed to use the SELECT or SHOW statements
+
+```
+guillaume@ubuntu:~/$ cat 1-create_database_if_missing.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+guillaume@ubuntu:~/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+Database
+information_schema
+hbtn_0c_0
+mysql
+performance_schema
+guillaume@ubuntu:~/$ cat 1-create_database_if_missing.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+guillaume@ubuntu:~/$ 
+```
+
+[solution](1-create_database_if_missing.sql)
+
+#### CREATE DATABASE Statement
+
+```
+CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] dbname
+    [create_option] ...
+
+create_option: [DEFAULT] {
+    CHARACTER SET [=] charset_name
+  | COLLATE [=] collation_name
+  | ENCRYPTION [=] {'Y' | 'N'}
+}
+```
+
+* An error occurs if the database exists and you did not specify `IF NOT
+EXIST`
+
+* `CREATE DATABASE` is not permitted within a session that has an active
+`LOCK TABLES` statement.
+
+* A db in MySQL is implemented as a directory containing files that correspond
+to tables in the db.Bec. there are no tables in a db when it is initially
+created, the CREATE DATABASE statement creates only a dir. under MySQL data
+dir.
+
+* When you create a db, let the server manage the dir. and files in it.
+Manipulating db dirs can cause inconsistencty. 
