@@ -253,4 +253,24 @@ the table first_table of the database hbtn_0c_0
 
 [solution](8-count_89.sql)
 
+#### 9. Full creation
+
+Write a script that creates a table `second_table` in the db `hbtn_0c_0`
+and multiplies rows.
+
+* `second_table` description:
+* `id` INT
+* `name` VARCHAR(256)
+* `score` INT
+
+* If the table `second_table` already exists, your script should not fail.
+
+* Your script should create these records:
+id = 1, name = “John”, score = 10
+id = 2, name = “Alex”, score = 3
+id = 3, name = “Bob”, score = 14
+id = 4, name = “George”, score = 8
+
+[solution](9-full_creation.sql)
+
 
