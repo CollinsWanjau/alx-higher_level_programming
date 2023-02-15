@@ -207,3 +207,11 @@ from the db hbtn_0c_0 in your MySQL server.
 * The db name will be passed as an argument of the `mysql` command
 
 [solution](5-full_table.sql)
+
+#### 6. List all in table
+
+Write a script that lists all rows of the table `first_table` from database
+
+* All fields should be printed.
+
+[solution](6-list_values.sql)
