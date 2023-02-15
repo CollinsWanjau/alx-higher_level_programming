@@ -303,3 +303,23 @@ Write a script that lists all records with a `score >= 10` in the table
 * Records should be ordered by score (top first)
 
 [solution](11-best_score.sql)
+
+#### 12. Cheating is bad
+
+Write a script that updates the score of Bob to `10` in the `second_table`
+
+* You are not allowed to use Bob's id value, only the `name` field.
+
+[solution](12-no_cheating.sql)
+
+##### UPDATE Statement
+
+* `UPDATE` is a DML statement that modifies rows in a table.
+
+```
+UPDATE table_reference
+    SET assignment_list
+    [WHERE where_condition]
+    [ORDER BY ...]
+    [LIMIT row_count]
+```
