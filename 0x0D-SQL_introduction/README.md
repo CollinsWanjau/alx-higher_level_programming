@@ -128,7 +128,7 @@ dir.
 * When you create a db, let the server manage the dir. and files in it.
 Manipulating db dirs can cause inconsistencty.
 
-# DROP DATABASE Statement
+#### DROP DATABASE Statement
 
 ```
 DROP {DATABASE | SCHEMA} [IF EXISTS] db_name
@@ -144,16 +144,66 @@ database are not automatically dropped. They must be dropped manually.
 * IF EXISTS is used to prevent an error from occurring if the database 
 does not exist.
 
-* If the default database is dropped, the default database is unset (the DATABASE() function returns NULL).
+* If the default database is dropped, the default database is unset 
+(the DATABASE() function returns NULL).
+* If you use DROP DATABASE on a symbolically linked database, 
+both the link and the original database are deleted.
 
-If you use DROP DATABASE on a symbolically linked database, both the link and the original database are deleted.
+* DROP DATABASE returns the number of tables that were removed.
 
-DROP DATABASE returns the number of tables that were removed.
-
-* If other files or directories remain in the database directory after MySQL removes those just listed, 
-the database directory cannot be removed. In this case, you must remove any remaining files or directories manually 
+* If other files or directories remain in the database directory after 
+MySQL removes those just listed, the database directory cannot be removed. 
+In this case, you must remove any remaining files or directories manually 
 and issue the DROP DATABASE statement again.
 
 #### 3. List tables
 
+Write a script that lists all the tables of a database in your MySQL server.
 
+* The database name will be passed as argument of mysql command (in the 
+following example: mysql is the name of the database)
+
+[solution](3-list_tables.sql)
+
+#### 4. First table
+
+Write a script that created a table called `first_table` in the current
+database in your MySQL server.
+
+* `first_table` description:
+-> `id` INT     -> `name` VARCHAR(256)
+* The db name will be passed as an arg of the `mysql` command.
+* If the table `first_table` already exists, your script should
+not fail
+
+```
+guillaume@ubuntu:~/$ cat 4-first_table.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+guillaume@ubuntu:~/$ cat 3-list_tables.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
+Enter password: 
+Tables_in_hbtn_0c_0
+first_table
+guillaume@ubuntu:~/$ 
+```
+
+[solution](4-first_table.sql)
+
+##### CREATE TABLE Statement
+
+```
+CREATE [TEMPORARY] TABLE [IF NOT EXISTS] tbl_name
+    (create_definition,...)
+    [table_options]
+    [partition_options]
+```
+
+*  You must have the CREATE privilege for the table.
+
+#### 5. Full description
+
+Write a script that prints the full description of the table `first_table` 
+from the db hbtn_0c_0 in your MySQL server.
+
+* The db name will be passed as an argument of the `mysql` command
+
+[solution](5-full_table.sql)
