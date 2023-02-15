@@ -153,3 +153,7 @@ DROP DATABASE returns the number of tables that were removed.
 * If other files or directories remain in the database directory after MySQL removes those just listed, 
 the database directory cannot be removed. In this case, you must remove any remaining files or directories manually 
 and issue the DROP DATABASE statement again.
+
+#### 3. List tables
+
+
