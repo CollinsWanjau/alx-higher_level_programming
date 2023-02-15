@@ -323,3 +323,10 @@ UPDATE table_reference
     [ORDER BY ...]
     [LIMIT row_count]
 ```
+
+#### 13. Score too low
+
+Write a script that removes all records with a `score <= 5` in the table
+`second_table`.
+
+[solution](13-change_class.sql)
