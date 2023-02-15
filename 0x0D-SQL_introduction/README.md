@@ -215,3 +215,42 @@ Write a script that lists all rows of the table `first_table` from database
 * All fields should be printed.
 
 [solution](6-list_values.sql)
+
+#### 7. First add
+
+Write a script that inserts a new row in the table `first_table`.
+
+* New row:
+-> id = 89
+-> name = Best School
+
+[solution](7-insert_value.sql)
+
+##### INSERT Statement
+
+```
+INSERT [LOW_PRIORITY | DELAYED | HIGH_PRIORITY] [IGNORE]
+    [INTO] tbl_name
+    [(col_name [, col_name] ...)]
+    {{VALUES | VALUE} (value_list) [, (value_list)] ...}
+    [AS row_alias[(col_alias [, col_alias] ...)]]
+    [ON DUPLICATE KEY UPDATE assignment_list]
+```
+
+* `INSERT` inserts new rows into an existing table.
+
+* The `INSERT ... VALUES, INSERT ... VALUES ROW()` and `INSERT ... SET`
+forms of the statement insert rows based on explicitily specified values.
+
+* `INSERT ... SELECT` form insert rows selected from another table or tables
+
+* `INSERT ... TABLE` insert rows from a single table.
+
+#### 8. Count 89
+
+Write a script that displays the number of records with id = 89 in 
+the table first_table of the database hbtn_0c_0
+
+[solution](8-count_89.sql)
+
+
