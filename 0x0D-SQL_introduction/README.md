@@ -273,4 +273,33 @@ id = 4, name = “George”, score = 8
 
 [solution](9-full_creation.sql)
 
+#### 10. List by best
 
+Write a script that lists all records of the table `second_table` and add
+multiple rows.
+
+* Results should display both the score and the name (in this order)
+* Recoeds should be ordered by score (top first)
+
+[solution](10-top_score.sql)
+
+##### SELECT Statement
+
+```
+SELECT
+    select_expr [, select_expr] ...
+    [into_option]
+    [FROM table_references]
+    [ORDER BY {col_name}]
+        [ASC | DESC]
+```
+
+#### 11. Select the best
+
+Write a script that lists all records with a `score >= 10` in the table
+`second_table` of the db
+
+* Results should display both the score and the name (in this order)
+* Records should be ordered by score (top first)
+
+[solution](11-best_score.sql)
