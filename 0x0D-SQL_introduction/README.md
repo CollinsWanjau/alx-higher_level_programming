@@ -126,4 +126,30 @@ created, the CREATE DATABASE statement creates only a dir. under MySQL data
 dir.
 
 * When you create a db, let the server manage the dir. and files in it.
-Manipulating db dirs can cause inconsistencty. 
+Manipulating db dirs can cause inconsistencty.
+
+# DROP DATABASE Statement
+
+```
+DROP {DATABASE | SCHEMA} [IF EXISTS] db_name
+```
+
+* DROP DATABASE drops all tables in the database and deletes the database. 
+Be very careful with this statement! To use DROP DATABASE, you need the 
+DROP privilege on the database. DROP SCHEMA is a synonym for DROP DATABASE.i
+
+* When a database is dropped, privileges granted specifically for the 
+database are not automatically dropped. They must be dropped manually.
+
+* IF EXISTS is used to prevent an error from occurring if the database 
+does not exist.
+
+* If the default database is dropped, the default database is unset (the DATABASE() function returns NULL).
+
+If you use DROP DATABASE on a symbolically linked database, both the link and the original database are deleted.
+
+DROP DATABASE returns the number of tables that were removed.
+
+* If other files or directories remain in the database directory after MySQL removes those just listed, 
+the database directory cannot be removed. In this case, you must remove any remaining files or directories manually 
+and issue the DROP DATABASE statement again.
