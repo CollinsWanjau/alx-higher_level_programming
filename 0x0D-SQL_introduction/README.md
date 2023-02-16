@@ -330,3 +330,25 @@ Write a script that removes all records with a `score <= 5` in the table
 `second_table`.
 
 [solution](13-change_class.sql)
+
+#### 14. Average
+
+Write a script that computes the score average of all records in the table.
+
+* The result column name should be `average`
+
+[solution](14-average.sql)
+
+#### 15. Number by score
+
+Write a script that lists the number of records with the same score in the
+table
+
+* The result should display:
+
+1. the `score`
+2. the number of records for this `score` with the label `number`.
+
+[solution](15-groups.sql)
+
+#### 
