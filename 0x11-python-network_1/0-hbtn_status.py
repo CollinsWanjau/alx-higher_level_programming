@@ -5,8 +5,8 @@ The script fetches https://alx-intranet.hbtn.io/status
 import urllib.request
 
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as \
-                response:
+    req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
+    with urllib.request.urlopen(req) as response:
         the_page = response.read()
         print(f"Body response:")
         print(f"\t- type: {type(the_page)}")
