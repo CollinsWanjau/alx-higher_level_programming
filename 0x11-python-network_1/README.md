@@ -8,3 +8,7 @@
 * How to make HTTP POST/PUT/etc. request
 * How to fetch JSON resources
 * How to manipulate data from an external service
+
+#### 0. What's my status? #0
+
+* Write a Python script that fetches `https://alx-intranet.hbtn.io/status`
