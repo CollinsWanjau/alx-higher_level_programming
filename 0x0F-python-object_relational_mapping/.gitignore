@@ -3,5 +3,5 @@
 4-cities_by_state.sql
 createtable.sql
 /venv/
-
+__pycache__/
 
