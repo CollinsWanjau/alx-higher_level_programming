@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
 1. Define a class square
     Initialize a 'square' class that defines
