@@ -62,7 +62,7 @@ class Square:
         """
         return (self.__size ** 2)
 
-    def pos_print(self):
+    def ps_print(self):
         """
         returns the position in spaces
         """
@@ -83,4 +83,4 @@ class Square:
         """
         Prints the square with the character '#'
         """
-        print(self.pos_print(), end='')
+        print(self.ps_print(), end='')
