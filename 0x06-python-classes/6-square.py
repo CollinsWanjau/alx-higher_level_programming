@@ -62,25 +62,18 @@ class Square:
         """
         return (self.__size ** 2)
 
-    def ps_print(self):
-        """
-        returns the position in spaces
-        """
-        pos = ""
-        if self.size == 0:
-            return "\n"
-        for w in range(self.position[1]):
-            pos += "\n"
-        for w in range(self.size):
-            for i in range(self.position[0]):
-                pos += " "
-            for j in range(self.size):
-                pos += "#"
-            pos += "\n"
-        return pos
-
     def my_print(self):
         """
         Prints the square with the character '#'
         """
-        print(self.ps_print(), end='')
+        if self.size == 0:
+            print()
+            return
+        for _ in range(self.position[1]):
+            print()
+        for _ in range(self.size):
+            for _ in range(self.position[0]):
+                print(" ", end="")
+            for _ in range(self.size):
+                print("#", end="")
+            print()
