@@ -37,5 +37,5 @@ print(my_square_6.size)
 print(my_square_6.area())
 print(my_square_6.position)
 
-my_square_7 = Square(3, (1, -3))
-my_square_7.my_print()
+# my_square_7 = Square(3, (1, -3))
+# my_square_7.my_print()
