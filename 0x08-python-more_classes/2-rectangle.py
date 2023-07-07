@@ -50,10 +50,10 @@ class Rectangle:
 
     def area(self):
         """returns the reactangle area"""
-        return self.width * self.height
+        return (self.width * self.height)
 
     def perimeter(self):
         """returns the rectangle perimeter"""
         if self.width == 0 or self.height == 0:
-            perimeter = 0
-        return (self.width * 2) + (self.height * 2)
+            return (0)
+        return ((self.width * 2) + (self.height * 2))
