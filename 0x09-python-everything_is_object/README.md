@@ -41,3 +41,12 @@
 * Some objects contain references to other objects; these are called `containers`.Examples of containers are tuples, lists and dictionaries
 
 * The refs are part of a container's value. In most cases, when we talk about the value of a container, we imply thwe values, not the identities of the contained objects.;however, when  we talk about the mutability of a container, only the identities of the immediately contained objects are implied.So, if an immutable container (like a tuple) contains a ref to a mutable object, its value changes if that mutable objest is changed.
+
+### Is really the same
+
+What do these 3 lines print?
+```
+>>> s1 = "Best School"
+>>> s2 = "Best School"
+>>> print(s1 is s2)
+```
