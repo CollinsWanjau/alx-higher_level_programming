@@ -1,5 +1,5 @@
 Importing the function from the module:
-	>>> Bs = __import__('7-base_geometry').BaseGeometry
+	>>> bg = __import__('7-base_geometry').BaseGeometry
 	>>>
 
 -----------------------------------------------------------
@@ -30,8 +30,8 @@ Checking for method docstring:
 -----------------------------------------------------------
 
 Checking for area failure:
-	>>> Bs = __import__('7-base_geometry').BaseGeometry
-	>>> b = Bs()
+	>>> bg = __import__('7-base_geometry').BaseGeometry
+	>>> b = bg()
 	>>> b.area()
 	Traceback (most recent call last):
 	...
