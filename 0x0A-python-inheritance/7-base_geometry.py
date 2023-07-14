@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-An empty class
+Defines a base geometry class BaseGeometry
 """
 
 
